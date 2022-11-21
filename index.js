@@ -15,6 +15,11 @@ const titleInput = document.querySelector('#title');
 const authorInput = document.querySelector('#author');
 const addBtn = document.querySelector('#addBtn');
 const clock = document.querySelector('#clock');
+const navTitle = document.querySelector('#ablogo');
+
+navTitle.addEventListener('click', () => {
+  window.location.reload();
+});
 
 const library = new BookLibrary;
 let allRmvBtns = document.querySelectorAll('.remove-btn');

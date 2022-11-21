@@ -36,6 +36,14 @@ body {
   background-repeat: no-repeat;
   height: 50px;
   width: 350px;
+  transition: 0.13s;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.nav-title:hover {
+  filter: drop-shadow(0 0 1px var(--text));
+  filter: saturate(300%);
 }
 
 .nav-btns {
