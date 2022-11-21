@@ -1,5 +1,14 @@
+* {
+  --primary: rgb(83, 62, 114);
+  --text: rgb(199, 192, 118);
+  color: var(--text);
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
+  background: rgba(199, 192, 118, 0.637)url('./artwork/book4.jpg');
+  background-size: cover;
+  background-blend-mode: color-burn;
 }
 
 .main-container {
@@ -12,40 +21,55 @@ body {
 
 .navigation {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 0.5rem 2rem;
-  border: 3px solid black;
+  padding: 5px 40px;
+  margin: 30px 40px;
+  /* border: 2px solid rgba(191, 176, 212, 0.356);
+  border-radius: 30px;
+  background-color: rgba(11, 2, 24, 0.342); */
 }
 
 .nav-title {
-  margin: 0;
-  font-size: 1.1rem;
-  font-weight: 700;
+  background-image: url('./artwork/logo.PNG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 350px;
 }
 
 .nav-btns {
+  margin-top: 10px;
   display: flex;
   align-items: center;
   max-height: 2rem;
   gap: 1rem;
+  transition: 0.5s;
 }
 
 .nav-btn {
   display: none;
 }
 
-.nav-radio-label {
-  font-size: 1.03rem;
+.nav-radio-label {  
+  font-size: 1.4rem;
   font-weight: 600;
   border: none;
   background-color: transparent;
   padding: 0.5rem;
   height: fit-content;
+  cursor: pointer;
+  transition: 0.2s;
+  user-select: none;
+}
+
+.nav-radio-label:hover {
+  text-shadow: -2px -1px 1px rgb(248, 99, 0);
 }
 
 input[type=radio]:checked + span {
-  color: blue;
+  color: rgb(255, 255, 255);
+  text-shadow: -2px -1px 1px rgb(248, 99, 0);
 }
 
 .nav-divider {
@@ -56,27 +80,55 @@ input[type=radio]:checked + span {
 }
 
 .clock {
-  font-weight: 600;
-  text-align: right;
-  margin: 0.1rem 0 3rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0.1rem 0 3rem; */
+  border: 2px solid rgb(104, 21, 12);
+  border-radius: 50vh;
+  width: max-content;
+  color: rgb(204, 55, 38);
+  padding: 5px 10px;
+  background-color: rgba(19, 2, 36, 0.555);
+  transition: 0.2s;
+  user-select: none;
+  height: 20px;
+  /* align-self: flex-end; */
+  /* margin-right: 17%; */
+}
+
+.clock:hover {
+  color: antiquewhite;
+  border: 2px solid antiquewhite;
+  text-shadow: 0 0 1px white;
+  /* font-size: 0.99rem; */
 }
 
 .list-tab {
   display: none;
 }
 
-.add-new-tabb {
+.add-new-tab {
   display: block;
-  width: 70%;
+  width: 60%;
   margin: auto;
+  border: 1px solid var(--text);
+  padding: 20px;
+  border-radius: 40px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(14, 1, 1, 0.95);
+  position: relative;
 }
 
 .books-ph {
   max-height: 50vh;
   overflow-y: scroll;
-  border: 3px solid black;
+  border: 1px solid var(--text);
   border-radius: 3px;
   margin-bottom: 3rem;
+  margin: 10vh 20vw;
+  border-radius: 20px;
 }
 
 .books-ph::-webkit-scrollbar {
@@ -84,28 +136,50 @@ input[type=radio]:checked + span {
 }
 
 .book-container {
+  height: 50px;
   display: flex;
-  padding: 0.2rem;
+  padding: 0.2rem 20px;
   justify-content: space-between;
   align-items: center;
+  background: rgba(2, 36, 17, 0.753) url('./artwork/book1.jpg');
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: -50%;
+  box-shadow: 0 -1px 1px black;
 }
 
 .book-container:nth-child(odd) {
-  background-color: lightgray;
+  background: rgba(36, 2, 2, 0.753) url('./artwork/book2.jpg');
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: -50%;
 }
 
 .book-title {
   font-weight: 700;
   line-height: 2.2rem;
   margin: 0;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .remove-btn {
+  cursor: pointer;
   font-weight: 700;
   font-size: 1.08rem;
-  height: 2rem;
-  border: 2px solid black;
-  background-color: white;
+  height: 40px;
+  width: 120px;
+  border: 1px solid rgb(199, 185, 185);
+  background-color: rgb(158, 11, 11);
+  border-radius: 100vh;
+  color: white;
+}
+
+.remove-btn:hover {
+  background-color: rgb(202, 14, 14);
 }
 
 .input-container {
@@ -119,24 +193,30 @@ input[type=radio]:checked + span {
 }
 
 .input {
-  width: 100%;
-  border: 2px solid black;
+  width: 50%;
+  border: 1px solid var(--text);
   border-radius: 3px;
   padding: 0.3rem;
   font-size: 1.06rem;
   font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.685);
   box-sizing: border-box;
+  color: white;
+  padding-left: 15px;
+  margin: 0;
 }
 
 .input-btn {
-  width: 4rem;
-  align-self: end;
-  border: 2px solid black;
-  border-radius: 3px;
+  width: 130px;
+  height: 40px;
+  border: 1px solid var(--text);
+  border-radius: 10px;
   padding: 0.3rem;
-  background-color: white;
+  background-color: rgb(8, 75, 6);
   font-size: 1.06rem;
   font-weight: 600;
+  transition: 0.1s;
+  color: white;
 }
 
 .contact-tab {
@@ -163,11 +243,63 @@ input[type=radio]:checked + span {
 .footer {
   margin-top: auto;
   display: flex;
-  justify-self: end;
+  justify-content: space-between;
+  align-items: center;
   bottom: 0.7rem;
   padding: 0.5rem 2rem;
-  border: 3px solid black;
   font-size: 1.1rem;
   font-weight: 700;
   line-height: 0.5rem;
+}
+
+.inp {
+  border-radius: 10px;
+  height: 40px;
+  /* margin-bottom: 15px; */
+}
+
+button {
+  background-color: black;
+}
+
+#addNewTab > h2 {
+  color: white;
+  font-size: 100px;
+  position: absolute;
+  top: -100px;
+  line-height: 60px;
+}
+
+.webauth {
+  color: rgb(156, 0, 0);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.fa {
+  font-size: 30px;
+  color: rgb(201, 201, 201);
+  cursor: pointer;
+}
+
+.fa:hover {
+  color: white;
+}
+
+.socials {
+  width: 20vw;
+  display: flex;
+  gap:50px;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.webauth:hover {
+  color: rgb(223, 0, 0);
+}
+
+#addBtn:hover {
+  background-color: green;
+  border: 1px solid white;
 }

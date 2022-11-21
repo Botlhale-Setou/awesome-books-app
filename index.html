@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Awesome Books | Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
@@ -17,7 +18,7 @@
     <div class="main-container">
       <header>
         <nav class="navigation">
-          <p class="nav-title">Awesome Books</p>
+          <p class="nav-title"></p>
           <div class="nav-btns">
             <label class="nav-radio-label" for="listRadio" id="listLabel">
               <input name="nav-radio" type="radio" id="listRadio" class="nav-btn">
@@ -37,35 +38,38 @@
           </div>
         </nav>
       </header>
-      <div id="clock" class="clock">
-      </div>
+      
 
       <section id="listTab" class="list-tab">
-        <h1>Awesome books</h1>
         <div class="books-ph" id="book"></div>
       </section>
 
       <section id="addNewTab" class="add-new-tab">
-        <h2>Add a new book</h2>
+        <h2>... add<br>another<br>book?</h2>
         <div class="input-container">
-          <input class="input" id="title" type="text" placeholder="Title" />
-          <input class="input" id="author" type="text" placeholder="Author" />
+          <input class="input inp" id="title" type="text" placeholder="Title" />
+          <input class="input inp" id="author" type="text" placeholder="Author" />
           <button id="addBtn" class="input-btn" type="button">
-            Add
+            Add +
           </button>
         </div>
       </section>
       <section id="contactTab" class="contact-tab">
-        <h2 class="contact-title">Contact Inforamtion</h2>
-        <span class="contact-question">Do you have any questions or you just want ot say "Hello"?<br> you can reach out to us!</span>
+        <h2 class="contact-title">Contact Information</h2>
+        <span class="contact-question">Whether you have a question or just want to say "Hi"<br>feel free to follow any one of the following links:</span>
         <ul>
-          <li class="contact-list-item">Our e-mail: mail@mail.com</li>
-          <li class="contact-list-item">Our phone number: 00123456789</li>
-          <li class="contact-list-item">Our address: Streetname 22, 84503 City, Country</li>
+          <li class="contact-list-item"><a href="mailto:botlhale.setou@gmail.com">botlhale.setou@gmail.com</a></li>
+        </ul>
+        <ul class="socials">
+          <a href="https://www.quora.com/profile/Botlhale-Setou"><li class="fa fa-quora"></li></a>
+          <a href="https://www.linkedin.com/in/botlhalesetou/"><li class="fa fa-linkedin"></li></a>
+          <a href="https://twitter.com/Botlhale_Setou"><li class="fa fa-twitter"></li></a>
+          <a href="https://github.com/Botlhale-Setou"><li class="fa fa-github"></li></a>
         </ul>
       </section>
       <footer class="footer">
-        <p>copyright</p>
+        <p>© Awesome Books 2022 <a href="https://botlhale-setou.github.io/" class="webauth"> : by Botlhale Setou</a></p>
+        <div id="clock" class="clock"></div>
       </footer>
     </div>
     

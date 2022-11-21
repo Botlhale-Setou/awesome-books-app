@@ -57,7 +57,7 @@ const updateRMV = () => {
 window.setInterval(() => {
   let temp = lux.DateTime.now().toLocaleString(lux.DateTime.DATETIME_MED);
   clock.innerHTML = '';
-  clock.innerHTML = temp;
+  clock.innerHTML = '🕒 ' + temp;
 }, 1000);
 
 listRadio.addEventListener('click', () => {
